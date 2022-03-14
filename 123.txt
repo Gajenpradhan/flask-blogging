@@ -1,0 +1,12 @@
+admin
+admin@admin.com
+Pass - admin
+
+user
+	gajen@gmail.com
+Pass - 	123456
+
+user
+
+	gajen5@gmail.com
+Pass - 	gajen5

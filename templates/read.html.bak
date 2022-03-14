@@ -1,0 +1,21 @@
+{% extends('base.html')%}
+{% block title %}{{title}}{% endblock %}
+{% block body %}
+	<br>
+	<h1 class="display-3">{{ post.title }}</h1>
+	<figure>
+		<figcaption class="blockquote-footer">
+		by <cite title="Source Title">{{post.author}}</cite>
+		</figcaption>
+	</figure>
+	<hr>
+	<blockquote class="blockquote">
+		<p>{{post.body |safe}}</p>
+		
+	</blockquote>
+	{{post.body}}
+	<p><p>this is image&nbsp;</p>
+
+<p><img alt="text" src="https://images.unsplash.com/photo-1417325384643-aac51acc9e5d?q=75&amp;fm=jpg&amp;w=400&amp;fit=max" style="height:533px; width:400px" /></p>
+</p>
+{% endblock %}

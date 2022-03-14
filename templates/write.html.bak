@@ -1,0 +1,40 @@
+{% extends('base.html')%}
+{% block title %}{{title}}{% endblock %}
+{% block body %}
+ {{ ckeditor.load() }}
+	<form action="#" method="post">
+		<div class="mb-3">
+			<label for="title" class="form-label">Title:</label>
+			<input type="text" class="form-control" id="title" placeholder="Type your title here" name="title">
+		</div>
+		<div class="mb-3">
+			<label for="body" class="form-label">Body:</label>
+			 {{ ckeditor.config(name='body') }}
+			<!--textarea class="form-control" id="body" rows="3" placeholder="Type your article here" name="body"></textarea-->
+		</div>
+
+
+
+<div class="mb-3">	
+<label for="title" class="form-label">Public Or Private:</label>	
+		<select class="form-select"  name="select" aria-label="Default select example">
+  <option value="0">Private</option>
+  <option value="1">Public</option>
+
+</select>
+
+<div class="mb-3">
+			<label for="title" class="form-label">Shared Author Name :</label>
+			<input type="text" class="form-control" id="author_s" placeholder="Type your title here" name="author_s">
+		</div>
+
+</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+{% endblock %}
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/tinymce/4.5.1/tinymce.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.10.0/standard/ckeditor.js"></script>
+<script type="text/javascript">
+   tinymce.init({ selector:'textarea' });
+</script>
